@@ -31,7 +31,7 @@ func (s Sign) Beats(t Sign) bool {
 	return ((t + 1) % 3) == s
 }
 
-// Play returns indices of winners of this game `in O(N)`` time complexity.
+// Play returns indices of winners of this game in `O(N)` time complexity.
 // It panics when `len(signs) < 2`.
 func Play(signs []Sign) []int {
 	if len(signs) < 2 {
