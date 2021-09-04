@@ -43,15 +43,15 @@ func Play(signs []Sign) []int {
 	someoneWins := false
 outer:
 	for _, winningSign = range []Sign{Rock, Paper, Scissors} {
-		someoneBeated := false
+		allSignsAreSame := true
 		for _, s := range signs {
 			if s.Beats(winningSign) {
 				continue outer
-			} else if winningSign.Beats(s) {
-				someoneBeated = true
+			} else if winningSign != s {
+				allSignsAreSame = false
 			}
 		}
-		if someoneBeated {
+		if !allSignsAreSame {
 			someoneWins = true
 			break
 		}
