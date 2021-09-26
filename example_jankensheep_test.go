@@ -28,7 +28,7 @@ func ExamplePlay() {
 	// Roboco
 }
 
-func ExamplePlay_Draw() {
+func ExamplePlay_draw() {
 	signs := []jankensheep.Sign{jankensheep.Rock, jankensheep.Paper, jankensheep.Scissors}
 	winners := jankensheep.Play(signs)
 	if len(winners) == 0 {
