@@ -39,7 +39,7 @@ func Play(signs []Sign) []int {
 	}
 
 	// First, we decide which sign wins the game.
-	var winningSign = Sign(0)
+	var winningSign Sign
 	someoneWins := false
 outer:
 	for _, winningSign = range []Sign{Rock, Paper, Scissors} {
